@@ -1,0 +1,25 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+}
+ul li{
+    float: left;
+    border-right: 1px solid white;
+}
+ul li a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+}
+ul li a:hover{
+    border: 1px solid white;
+    background-color:darkgray;
+}
+#perfil{
+    float: right;
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CobosHub</title>
+
+    <link rel="stylesheet" href="../styles/css/estiloindex.css">
+    <link rel="stylesheet" href="../styles/css/estilomenu.css">
+    <link rel="stylesheet" href="../styles/css/estiloproducto.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid" id="contenedorprincipal">
+        <!--encabezado-->
+        <header>
+            <!--grid-->
+            <div class="">
+                <div class="row">
+                    <div class="col p-5">
+                        <h3>CobosHub</h3>
+                    </div>
+
+
+                    <!--menu desplegado y barra de busqueda-->
+                    <div class="col p-5">
+                        <div class="input-group">
+                            <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+                                Categorias
+                            </button>
+
+
+                            <ul class="dropdown-menu">
+                                <li><a href="../views/refaccionaria.html" class="dropdown-item">Refaccionaría</a></li>
+                                <li class="dropdown-item">Videojuegos</li>
+                                <li><a href="../views/ropa.html" class="dropdown-item">Ropa</a></li>
+                            </ul>
+                            <input class="form-control" type="text" name="txtbuscar" placeholder="Videojuegos">
+                            <button class="btn btn-warning" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg></button>
+                        </div>
+                    </div>
+
+
+                    <div class="col p-5">
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-cart3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+
+        <!--menu-->
+        <nav>
+            <ul>
+                <li>
+                    <a href="" data-bs-toggle="offcanvas" data-bs-target="#demo"><i><i class="fa-solid fa-bars"></i></i>
+                        Todo</a>
+                    <div class="offcanvas offcanvas-start text-bg-dark" id="demo">
+                        <div class="offcanvas-header">
+                            <h1 class="offcanvas-title">Información</h1>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Tendencias</p>
+                            <p>Programas</p>
+                            <p>Descuentos</p>
+                            <p>Ayuda y configuración</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="../../index.html">Promociones</a>
+                </li>
+                <li>
+                    <a href="../../index.html">Lo Mas Vendido</a>
+                </li>
+                <li id="perfil">
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Perfil</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../views/login.html" class="dropdown-item">Iniciar sesión</a></li>
+                        <li><a href="#" class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Registrarse</a></li>
+                        <li><a href="#" class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#changePasswordModal">Contraseña</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Modal de Cambio de Contraseña -->
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="changePasswordModalLabel">Cambiar Contraseña</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="currentPassword" class="form-label">Contraseña Actual</label>
+                                <input type="password" class="form-control" id="currentPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newPassword" class="form-label">Nueva Contraseña</label>
+                                <input type="password" class="form-control" id="newPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmNewPassword" class="form-label">Confirmar Nueva Contraseña</label>
+                                <input type="password" class="form-control" id="confirmNewPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal de Registro -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="registerUsername" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="registerUsername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerEmail" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="registerEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="registerConfirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--contenido-->
+        <div class="sect">
+            <div class="row">
+
+                <div class="col-sm-10">
+                    <!--cards-->
+                    <h1 class="titmen">Catalogo</h1>
+                    <br>
+                    <hr>
+                    <!--Cards-->
+                    <div class="row" id="al">
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd">
+                            <img src="../../public/assets/img/vi1.jpg" alt="" class="card-img-top" id="imc">
+                            <div class="card-body">
+                                <h4>Consola PlayStation 5</h4>
+                                <p>$10,599.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card al" id="cd2">
+                            <img src="../../public/assets/img/vi2.jpg" alt="" class="card-img-top" id="imc2">
+                            <div class="card-body">
+                                <h4>Auriculares Avanzados</h4>
+                                <p>$4,499.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd3">
+                            <img src="../../public/assets/img/vi3.jpg" alt="" class="card-img-top" id="imc3">
+                            <div class="card-body">
+                                <h4>Controles PlayStaion</h4>
+                                <p>$1,249.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd4">
+                            <img src="../../public/assets/img/vi4.jpg" alt="" class="card-img-top" id="imc4">
+                            <div class="card-body">
+                                <h4>Nintendo Switch</h4>
+                                <p>$5,184.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <br><br>
+                        <h1 class="titmen">Ofertas y Descuentos</h1>
+                        <hr>
+                    </div>
+                    <div class="row" id="al">
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd">
+                            <img src="../../public/assets/img/vi5.jpg" alt="" class="card-img-top" id="imc">
+                            <div class="card-body">
+                                <h4>Teclado Gamer</h4>
+                                <p>$288.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card al" id="cd2">
+                            <img src="../../public/assets/img/vi6.jpg" alt="" class="card-img-top" id="imc2">
+                            <div class="card-body">
+                                <h4>Mouse Gamming</h4>
+                                <p>$953.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd3">
+                            <img src="../../public/assets/img/vi7.jpg" alt="" class="card-img-top" id="imc3">
+                            <div class="card-body">
+                                <h4>Camara Web</h4>
+                                <p>$269.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 mt-1 p-3 card" id="cd4">
+                            <img src="../../public/assets/img/vi8.jpg" alt="" class="card-img-top" id="imc4">
+                            <div class="card-body">
+                                <h4>The Legend of Zelda</h4>
+                                <p>$999.00</p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                
+                <div class="col-sm-2" id="bor">
+                    <h6 class="titmen">Videojuegos</h6>
+                    <form action="">
+                        <ol class="lisbel">
+                            <li class="lisbel"><input type="checkbox"> Nintendo Switch</li>
+                            <li class="lisbel"><input type="checkbox"> Pc</li>
+                            <li class="lisbel"><input type="checkbox"> Mac</li>
+                            <li class="lisbel"><input type="checkbox"> PlayStation 4</li>
+                            <li class="lisbel"><input type="checkbox"> Xbox Series X & S</li>
+                        </ol>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!--pie de pagina-->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p>Copyright © CobosHub 2024. Todos los derechos se encuentran reservados.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">Politicas de privacidad</a></li>
+                            <li class="list-inline-item"><a href="#">Terminos de uso</a></li>
+                            <li class="list-inline-item"><a href="#">Contactanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

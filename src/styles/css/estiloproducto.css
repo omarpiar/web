@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.sect {
+    clear: both;
+    padding: 20px;
+}
+
+.titmen {
+    margin-left: 20px;
+    color: #2c3e50;
+    font-size: 1.5em;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+/* List Styles */
+li.lisbel {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+a.lisbel {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.lisbel:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+#bor {
+    border-right: 1px solid rgba(0, 0, 0, 0.383);
+    padding-right: 15px;
+    margin: 10px 0;
+}
+
+/* Image Styles */
+#imc {
+    width: 200px;
+    height: 200px;
+}
+
+#imc2, #imc3, #imc4 {
+    width: 140px;
+    height: 200px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#cd, #cd2, #cd3, #cd4 {
+    width: 260px;
+    height: 400px;
+    margin: 0 5px 20px 5px;
+    overflow: hidden;
+}
+
+#cd {
+    margin-right: 5px;
+}
+
+#cd4 {
+    object-fit: cover;
+}
+
+.card-body h4 {
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.card-body p {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../styles/css/estiloregistro.css" rel="stylesheet">
+</head>
+<body> 
+  <div class="container">
+    <h2 class="card-title text-center mb-4">Registro de Usuario</h2>
+    <form action="../../validacionesPHP/validarRegistro.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="nombre" class="form-label">Nombre o nombres:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidoPaterno" class="form-label">Apellido Paterno:</label>
+        <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidoMaterno" class="form-label">Apellido Materno:</label>
+        <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno" required>
+      </div>
+      <div class="form-group">
+        <label for="correo" class="form-label">Correo electrónico:</label>
+        <input type="email" class="form-control" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono" class="form-label">Teléfono:</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="foto" class="form-label">Foto:</label>
+        <input type="file" class="form-control" id="foto" name="foto" accept=".png,.jpg,.jpeg" required>
+      </div>
+      <div class="form-group">
+        <label for="usuario" class="form-label">Usuario:</label>
+        <input type="text" class="form-control" id="usuario" name="usuario" required>
+      </div>
+      <div class="form-group">
+        <label for="contrasena" class="form-label">Contraseña:</label>
+        <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+      </div>
+      <div class="form-group">
+        <label for="tipoUsuario" class="form-label">Tipo de usuario:</label>
+        <select name="tipoUsuario" id="tipoUsuario" class="form-label">
+          <option value="1">Administrador</option>
+          <option value="2">Cliente</option>
+          <option value="3">Invitado</option>
+        </select>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
